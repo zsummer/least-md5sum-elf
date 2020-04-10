@@ -25,7 +25,7 @@ least-no-kernel.sh
 [sstrip github url](https://github.com/BR903/ELFkickers)
 
 ### example  
-gcc-8编译下  463字节  
+gcc编译下  463字节  
 ```
 zsummer@debian:~/hub/least-md5sum-elf$ sh least.sh 
 as: total time in assembly: 0.004000
