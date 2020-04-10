@@ -1,7 +1,5 @@
 #/bin/bash
-m32="-m elf_i386"
-
-gcc-8 -S -o md5.s md5.c -fno-asynchronous-unwind-tables -Os 
+gcc -S  md5.c -fno-asynchronous-unwind-tables -Os -ffast-math -fomit-frame-pointer -fsingle-precision-constant -fno-verbose-asm  -nodefaultlibs
 sed -i -e "s/main/_start/g" md5.s
 sed -i -e "s/\.size.*//g" md5.s
 sed -i -e "s/\.ident.*//g" md5.s

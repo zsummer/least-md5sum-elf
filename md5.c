@@ -61,7 +61,8 @@ void main()
     syscall(SYS_read, inst_fd, text, 20);
     const char * hex_table = "0123456789abcdef";
     char hex[2];
-    for (int i = 0; i < 16; i++) 
+    int i;
+    for (i = 0; i < 16; i++) 
     {
         hex[0] = hex_table[(text[i] >> 4) & 0xf];
         hex[1] = hex_table[(text[i]) & 0xf];

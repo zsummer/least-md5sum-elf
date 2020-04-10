@@ -25,28 +25,31 @@ least-no-kernel.sh
 [sstrip github url](https://github.com/BR903/ELFkickers)
 
 ### example  
-gcc-8编译下  529字节  
+gcc-8编译下  463字节  
 ```
 zsummer@debian:~/hub/least-md5sum-elf$ sh least.sh 
 as: total time in assembly: 0.004000
 frag chains:
 
-        0x55b793877e80 .text                   258 frags
+        0x560d91b21e80 .text                   231 frags
 
-        0x55b793877f18 .data                     2 frags
+        0x560d91b21f18 .data                     2 frags
 
-        0x55b793877fb0 .bss                      2 frags
-fixups: 13
-5 mini local symbols created, 1 converted
-744 md5
-744 md5
-529 md5
-zsummer@debian:~/hub/least-md5sum-elf$ ./md5
-6bb0b34c73fc825e2b0be0314d361a4dskyler@debian:~/hub/least-md5sum-elf$ 
-zsummer@debian:~/hub/least-md5sum-elf$ md5sum md5
-6bb0b34c73fc825e2b0be0314d361a4d  md5
+        0x560d91b21fb0 .bss                      2 frags
+fixups: 12
+8 mini local symbols created, 1 converted
+672 md5
+672 md5
+463 md5
 zsummer@debian:~/hub/least-md5sum-elf$ wc -c md5
-529 md5
+463 md5
+zsummer@debian:~/hub/least-md5sum-elf$ ./md5
+164ee61efc0382188ac0532b215b2a72skyler@debian:~/hub/least-md5sum-elf$ 
+zsummer@debian:~/hub/least-md5sum-elf$ md5sum ./md5
+164ee61efc0382188ac0532b215b2a72  ./md5
+zsummer@debian:~/hub/least-md5sum-elf$ ldd md5
+        不是动态可执行文件
+zsummer@debian:~/hub/least-md5sum-elf$ 
 ```
 
 ## 基本原理       
