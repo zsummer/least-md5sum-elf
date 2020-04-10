@@ -24,6 +24,31 @@ least-no-kernel.sh
 可以剔除30%的体积    
 [sstrip github url](https://github.com/BR903/ELFkickers)
 
+### example  
+gcc-8编译下  529字节  
+```
+zsummer@debian:~/hub/least-md5sum-elf$ sh least.sh 
+as: total time in assembly: 0.004000
+frag chains:
+
+        0x55b793877e80 .text                   258 frags
+
+        0x55b793877f18 .data                     2 frags
+
+        0x55b793877fb0 .bss                      2 frags
+fixups: 13
+5 mini local symbols created, 1 converted
+744 md5
+744 md5
+529 md5
+zsummer@debian:~/hub/least-md5sum-elf$ ./md5
+6bb0b34c73fc825e2b0be0314d361a4dskyler@debian:~/hub/least-md5sum-elf$ 
+zsummer@debian:~/hub/least-md5sum-elf$ md5sum md5
+6bb0b34c73fc825e2b0be0314d361a4d  md5
+zsummer@debian:~/hub/least-md5sum-elf$ wc -c md5
+529 md5
+```
+
 ## 基本原理       
 * 使用内核已有的md5计算来完成操作   
 * 去除libc的依赖 包括main函数以及常用的api 直接使用syscall来完成   
