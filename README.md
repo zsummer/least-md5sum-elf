@@ -8,7 +8,7 @@
 ```
 sh least.sh
 ```
-这里有两个实现 一个是使用Linux Kernel Crypto API 实现, 大约最终的ELF可执行文件约500字节大小 
+这里有两个实现 一个是使用Linux Kernel Crypto API 实现, 大约最终的ELF可执行文件约460字节大小 
 但是这个实现会使用到较多的int 80指令来完成和内核的数据交换     
 
 ### the second version   
